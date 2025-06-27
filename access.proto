@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service AccessChecker {
+  rpc GetAccessibleRepos (UserRequest) returns (RepoList) {}
+}
+
+message UserRequest {
+  string username = 1;
+}
+
+message RepoList {
+  repeated string repositories = 1;
+}
