@@ -29,11 +29,14 @@ To connect to the GitHub API as an admin:
 1. Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
 2. Create a **classic token**
 3. Enable at minimum the **`repo` scope** (full access to repositories)
-4. Save the token in a `.env` file in your project root:
+4. Save the token and org name in a `.env` file in your project root:
 
 ```env
 GITHUB_TOKEN=ghp_your_generated_token_here
+ORG_NAME=your_org_name
 ```
+
+Make sure this matches the exact name of your GitHub organization (not a username).
 
 ---
 

@@ -5,12 +5,12 @@ import access_pb2, access_pb2_grpc
 from repo_info import build_opa_repo_access_inputs
 from accessible_repos import get_user_accessible_repos
 
-ORG_NAME = "test1-grpc"
+from config import ORG_NAME
 
 class AccessCheckerServicer(access_pb2_grpc.AccessCheckerServicer):
     def GetAccessibleRepos(self, request, context):
         username = request.username
-        opa_inputs = build_opa_repo_access_inputs(ORG_NAME)
+        opa_inputs = build_opa_repo_access_inputs(str(ORG_NAME))
         repos = get_user_accessible_repos(username, opa_inputs)
         return access_pb2.RepoList(repositories=repos)
 
