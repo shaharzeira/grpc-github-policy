@@ -44,7 +44,7 @@ GITHUB_TOKEN=ghp_your_generated_token_here
 From the project root, run:
 
 ```bash
-opa run --server --watch opa_auth
+opa run --server --watch opa_auth/authz.rego
 ```
 
 OPA will load policy from `opa_auth/authz.rego`.
@@ -70,5 +70,5 @@ This service will use your GitHub token to fetch repo access and evaluate it usi
 In another terminal:
 
 ```bash
-python grpc_client/main.py <github-username>
+python grpc_client.py <github-username>
 ```
