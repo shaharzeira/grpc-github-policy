@@ -1,7 +1,7 @@
 import argparse
 import grpc
-import access_pb2
-import access_pb2_grpc
+import pb.access_pb2 as access_pb2
+import pb.access_pb2_grpc as access_pb2_grpc
 
 def main(username: str):
     # Set up gRPC channel and stub

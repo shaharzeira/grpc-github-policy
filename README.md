@@ -61,7 +61,7 @@ OPA will load policy from `opa_auth/authz.rego`.
 In a new terminal:
 
 ```bash
-python grpc_server.py
+python -m grpc_server.grpc_server
 ```
 
 This service will use your GitHub token to fetch repo access and evaluate it using OPA.

@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import access_pb2 as access__pb2
+from pb import access_pb2 as access__pb2
 
 GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__

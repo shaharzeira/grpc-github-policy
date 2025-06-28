@@ -1,11 +1,12 @@
 import grpc
 from concurrent import futures
-import access_pb2, access_pb2_grpc
+from pb import access_pb2
+from pb import access_pb2_grpc
 
-from repo_info import build_opa_repo_access_inputs
-from accessible_repos import get_user_accessible_repos
+from .repo_info import build_opa_repo_access_inputs
+from .accessible_repos import get_user_accessible_repos
 
-from config import ORG_NAME
+from .config import ORG_NAME
 
 class AccessCheckerServicer(access_pb2_grpc.AccessCheckerServicer):
     def GetAccessibleRepos(self, request, context):
